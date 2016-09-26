@@ -1,0 +1,23 @@
+{
+  "name": "mean-aula",
+  "version": "1.0.0",
+  "description": "MEAN aula Alura",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielGalvao/mean-aula.git"
+  },
+  "author": "Danie Galvão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielGalvao/mean-aula/issues"
+  },
+  "homepage": "https://github.com/danielGalvao/mean-aula#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
