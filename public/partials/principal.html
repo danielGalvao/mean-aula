@@ -15,11 +15,11 @@
 						Nova foto
 					</a>
 				</span>
-				<input class="form-control" placeholder="filtrar pelo título da foto" 
+				<input class="form-control" placeholder="filtrar pelo título da foto"
 					ng-model="filtro" ng-model-options="{ debounce: 500 }">
 		</form>
-	</div> <!-- fim col-md-12 -->
-</div> <!-- fim row -->
+	</div>
+</div>
 
 <div class="row">
     <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
