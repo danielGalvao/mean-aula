@@ -1,4 +1,5 @@
 var api = {};
+
 api.lista = function(req, res){
 
   var fotos = [
@@ -6,6 +7,6 @@ api.lista = function(req, res){
     {_id:2, titulo:'Leao 2', url:'http://i0.wp.com/spacenews.com.br/wp-content/uploads/2015/11/maxresdefault.jpg'}
   ];
   res.json(fotos);
-  
+
 };
 module.exports = api;
