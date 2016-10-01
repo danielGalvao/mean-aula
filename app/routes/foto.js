@@ -5,5 +5,6 @@ module.exports = function(app){
     .post(api.addFoto);
   app.route('/v1/fotos/:id')
     .get(api.buscaPorId)
-    .delete(api.removePorId);
+    .delete(api.removePorId)
+    .put(api.atualiza);
 }

@@ -30,4 +30,15 @@ api.removePorId = function(req, res){
  res.sendStatus(204);
 };
 
+api.atualiza = function(req, res){
+  var foto = req.body
+  ,   fotoId = req.params.id;
+  var index = fotos.findIndex(function(foto){
+    return foto._id == fotoId;
+  });
+  fotos[index] = foto;
+
+  res.sendStatus(200);
+}
+
 module.exports = api;
