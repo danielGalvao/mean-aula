@@ -1,26 +1,21 @@
+var mongoose = require('mongoose');
 var api = {};
-var contador = 2;
-var fotos = [
-  {_id:1, titulo:'Leao', url:'http://i0.wp.com/spacenews.com.br/wp-content/uploads/2015/11/maxresdefault.jpg'},
-  {_id:2, titulo:'Leao 2', url:'http://i0.wp.com/spacenews.com.br/wp-content/uploads/2015/11/maxresdefault.jpg'}
-];
 
 api.lista = function(req, res){
-  res.json(fotos);
+  var model = mongoose.model('Foto');
+  model.find({}).then(function(fotos){
+    res.json(fotos);
+  },function(error){
+    res.status(500).json(error);
+  })
 };
 
 api.addFoto = function(req, res){
-  var foto = req.body;
-  foto._id = ++contador;
-  fotos.push(foto);
-  res.json(foto);
+
 }
 
 api.buscaPorId = function(req, res){
-  var foto = fotos.find(function(foto){
-    return foto._id == req.params.id;
-  });
-  res.json(foto);
+
 };
 
 api.removePorId = function(req, res){
