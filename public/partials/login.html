@@ -1,6 +1,6 @@
 <h1 class="text-center">Login</h1>
 <p class="alert-danger">{{mensagem}}</p>
-<form>
+<form ng-submit="autenticar()">
   <div class="form-group">
     <label>Login</label>
     <input type="text" class="form-control" ng-model="usuario.login">
@@ -9,5 +9,5 @@
     <label>Senha</label>
     <input type="password" class="form-control" ng-model="usuario.senha">
   </div>
-  <input type="button" value="Entrar" class="btn btn-primary">
+  <input type="submit" value="Entrar" class="btn btn-primary">
 </form>

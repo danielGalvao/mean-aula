@@ -1,5 +1,5 @@
 angular.module('alurapic')
-.controller('LoginController', function($scope, $http){
+.controller('LoginController', function($scope, $http, $location){
   $scope.usuario = {};
   $scope.mensagem = '';
 
@@ -10,7 +10,7 @@ angular.module('alurapic')
       .then(function(){
         $location.path('/');
       },function(error){
-        console.log(error);
+        $scope.usuario = {};
         $scope.mensagem = 'Login ou senha inválidos';
       })
   };
